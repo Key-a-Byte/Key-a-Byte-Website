@@ -26,6 +26,19 @@
     <link rel="stylesheet" type="text/css" href='css/prettyPhoto.css' />
     <link rel="stylesheet" type="text/css" href='css/sm-clean.css' />
     <link rel="stylesheet" type="text/css" href='style.css' />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />    
+  <style>
+        .animate__animated.animate__heartBeat {
+    --animate-duration: 2s;
+    }
+        :root {
+    --animate-duration: 800ms;
+    --animate-delay: 2s;
+    }
+  </style>
 </head>
 <body>
     <!-- Preloader Gif -->
@@ -56,10 +69,10 @@
     <!-- Home -->
 
     <div id="home" class="section intro-page">
-        <div class="block content-1170 center-relative center-text">
+        <div class="block content-1170 center-relative center-text ">
             <img class="top-logo" src="demo-images/logo.png" alt="key-a-byte" />
             <br>
-            <h1 style="color:Tomato">Namaste.<br>This Is</h1>
+            <h1 style="color:Tomato" class="wow animate__bounce" >Namaste.<br>This Is</h1>
                <h1 style="font-size:400%;color:white;">Key-a-Byte.</h1>
             <p style ="color:Gray" class="title-desc">Probably the BEST On-site Hackathon Ever!</p><br>
         </div>
@@ -267,8 +280,8 @@
     <div id="news" class="section">
         <div class="block content-1170 center-relative">
             <div class="section-title-holder right">
-                <div class="section-num">
-                    <span>
+                <div class="section-num ">
+                    <span >
                         04
                     </span>
                 </div>
@@ -279,7 +292,7 @@
                     <div class="blog-holder block center-relative">
 
                         <article class="relative blog-item-holder center-relative">
-                            <div class="num">Sponsor<br><br>Us!</div>
+                            <div class="num wow animate__heartBeat">Sponsor<br><br>Us!</div>
                             <div class="clear"></div>
                         </article>
                     </div>
@@ -300,22 +313,22 @@
                         <ul id="text1" class="slides testimonial">
                             <li>
                                 <div class="testimonial-content">
-                                    <p class="testimonial-text">"The secret of getting ahead is getting started"</p>
-                                    <p class="testimonial-author">MARK TWAIN</p>
+                                    <p class="testimonial-text wow animate__bounceInLeft">"The secret of getting ahead is getting started"</p>
+                                    <p class="testimonial-author wow animate__bounceInLeft ">MARK TWAIN</p>
                                 </div>
                                 <div class="clear">
                                 </div>
                             </li>
                             <li style="width: 500px;">
                                 <div class="testimonial-content">
-                                    <p class="testimonial-text">Sponsors steaming up...</p>
+                                    <p class="testimonial-text wow animate__bounceInLeft">Sponsors steaming up...</p>
                                 </div>
                                 <div class="clear"></div>
                             </li>
                             <li>
                                 <div class="testimonial-content">
-                                    <p class="testimonial-text">Intrested in Sponsoring the BEST Hackathon?</p>
-                                    <p class="testimonial-author">Mail us at organizers@keyabite.tech and we'll reply with the speed of light!</p>
+                                    <p class="testimonial-text wow animate__bounceInLeft">Intrested in Sponsoring the BEST Hackathon?</p>
+                                    <p class="testimonial-author wow animate__bounceInLeft">Mail us at organizers@keyabite.tech and we'll reply with the speed of light!</p>
                                 </div>
                                 <div class="clear"></div>
                             </li>
@@ -380,6 +393,25 @@
     <script type='text/javascript' src='js/imagesloaded.pkgd.js'></script>
     <script type='text/javascript' src='js/jquery.prettyPhoto.js'></script>
     <script type='text/javascript' src='js/main.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        var wow = new WOW(
+  {
+    boxClass:     'wow',      // animated element css class (default is wow)
+    animateClass: 'animate__animated', // animation css class (default is animated)
+    offset:       0,          // distance to the element when triggering the animation (default is 0)
+    mobile:       true,       // trigger animations on mobile devices (default is true)
+    live:         true,       // act on asynchronously loaded content (default is true)
+    callback:     function(box) {
+      // the callback is fired every time an animation is started
+      // the argument that is passed in is the DOM node being animated
+    },
+    scrollContainer: null,    // optional scroll container selector, otherwise use window,
+    resetAnimation: true,     // reset animation on end (default is true)
+  }
+);
+wow.init();
+    </script>
 </body>
 
 </html>
